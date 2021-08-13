@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superology</title>
+    <link rel="shortcut icon" type="image/jpg" href="./assets/favicon.png"/>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="map"></div>
+        <div id="sidebar">
+            <div class="address"></div>
+            <div class="time">
+                <div class="icon"></div>
+                <div class="time-text"></div>
+            </div>
+            <div class="weather-title">
+                <span class="dark">Weather</span>
+            </div>
+            <div class="weather">
+                <div class="weather-date"></div>
+                <div class="weather-description"></div>
+                <div class="weather-clouds"></div>
+                <div class="weather-pressure"></div>
+                <div class="weather-pressure"></div>
+                <div class="weather-temp"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./components/fetchData.js"></script> 
+    <script src="./components/calculateOpeningHours.js"></script> 
+    <script src="./components/getAddressData.js"></script> 
+    <script src="./components/getWeatherData.js"></script> 
+    <script src="/index.js"></script> 
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOMuZ7Jw1YKmflDV-iULHkxl5_O0bHEQs&callback=initMap">
+    </script> 
+</body>
+</html>

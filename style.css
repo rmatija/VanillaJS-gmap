@@ -1,0 +1,190 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-shadow: border-box;
+}
+
+/*  Colors  */
+:root {
+    --light-gray: #ebebeb;
+    --dark-grey: #6e6e6e;
+    --white: #ffffff;
+    --odd: #f7f7f7;
+    --blue: #3e5b9d;
+    --green: #8bba0a;
+    --orange: #e78f09;
+    --red: #e82e00;
+}
+
+.blue-background {
+    background-color: var(--blue);
+}
+
+.green-background {
+    background-color: var(--green);
+}
+
+.orange-background {
+    background-color: var(--orange);
+}
+
+.red-background {
+    background-color: var(--red);
+}
+
+/*  end of colors  */
+
+body {
+    background-color: var(--light-gray);
+}
+
+.container {
+    display: flex; 
+}
+
+/*  Map style  */
+#map {
+    width: 400px;
+    height: 500px;
+    border: 2px solid var(--white);
+}
+/*  End of map style  */
+
+/*  Sidebar style  */
+#sidebar {
+    width: 215px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  Address and time  */
+.address-data {
+    display: flex;
+    background-color: var(--white);
+    padding: 22px 18px;
+    color: var(--dark-grey);
+}
+
+.time-data {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    padding: 0 15px 15px;
+    color: var(--dark-grey);
+}
+
+.icon,
+.time-icon{
+    display: flex;
+    margin-right: 8px;
+    height: 25px;
+}
+
+.address,
+.time {
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/*  Weather title  */
+.weather-title {
+    display: none;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--white);
+    margin: 15px 0 0 15px;
+    font-weight: 600;
+}
+
+/*  Weather container style */
+.weather {
+    font-size: 12px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-day-container {
+    flex: 1;
+    margin-left: 15px;
+    padding: 3px 8px;
+    line-height: 1.5;
+}
+
+.weather-date-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-daily-temp {
+    display: flex;
+}
+
+.weather-daily-temp p {
+    padding: 0 3px;
+    margin-left: 3px;
+    color: var(--white);
+}
+
+.weather .weather-day-container:first-child {
+    border-left: 2px solid var(--blue);
+}
+
+.weather > div:nth-child(even) {
+    background-color: var(--white);
+}
+
+.weather > div:nth-child(odd) {
+    background-color: var(--odd);
+}
+
+span.dark {
+    color: var(--dark-grey);
+    font-weight: 600;
+}
+
+span.light {
+    color: var(--dark-grey);
+}
+
+/*  End of sidebar style  */
+
+/*  Remove small info window on marker  */
+.gm-style .gm-style-iw-c,
+.gm-style .gm-style-iw-t::after {
+    display: none;
+}
+
+@media (max-width: 780px) {
+   .container {
+       flex-direction: column;
+   }
+
+   #map {
+       margin: 15px;
+       width: unset;
+   }
+
+   #sidebar {
+       width: 100%;
+   }
+
+   .address,
+   .time,
+   .weather {
+       margin: 0 15px;
+   }
+
+   .address-data {
+    align-items: center;
+   }
+
+   .weather-title {
+       margin: 15px 15px 0 15px;
+   }
+
+   .weather-day-container {
+       margin-left: 0;
+   }
+}
+
